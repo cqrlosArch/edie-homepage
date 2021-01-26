@@ -1,0 +1,90 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 0.5rem;
+  @include md {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__title {
+    font-family: Heebo;
+    margin: 0;
+    font-weight: 800;
+    font-size: 24px;
+    color: $textColor;
+  }
+  .topbar {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      font-size: 25px;
+      cursor: pointer;
+      @include md {
+        display: none;
+      }
+      &--close {
+        color: $white;
+        margin: 1rem;
+      }
+    }
+
+    .main-navigation {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50vh;
+      background-color: $footer;
+      padding-top: 2rem;
+      @include md {
+        display: block;
+        position: relative;
+        height: auto;
+        padding: 0;
+        background-color: inherit;
+      }
+      .main-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        @include md {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          width: max-content;
+        }
+        &__item {
+          margin-bottom: 1rem;
+          @include md {
+            margin: 0;
+            margin-left: 1rem;
+          }
+        }
+        &__link {
+          text-decoration: none;
+          color: $white;
+          font-size: 1.5rem;
+          @include md {
+            color: $textColor;
+            font-size: 20px;
+          }
+        }
+      }
+
+      .icon--close {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+    .main-navigation--active {
+      display: block;
+    }
+  }
+}

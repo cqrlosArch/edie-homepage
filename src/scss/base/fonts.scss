@@ -1,0 +1,9 @@
+@include fontface('poppinsbold', 'poppins-bold');
+@include fontface('poppinslight', 'poppins-light');
+@include fontface('poppinsmedium', 'poppins-medium');
+@include fontface('poppinsregular', 'poppins-regular');
+
+$poppins-regular: 'poppinsregular', sans-serif;
+$poppins-bold: 'poppinsbold', sans-serif;
+$poppins-medium: 'poppinsmedium', sans-serif;
+$poppins-light: 'poppinslight', sans-serif;

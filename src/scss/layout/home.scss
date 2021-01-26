@@ -1,0 +1,108 @@
+.home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+
+  &__title {
+    font-family: $poppins-regular;
+    font-size: 24px;
+    margin-left: 2rem;
+    padding-right: 2rem;
+    max-width: 300px;
+    @include md {
+      font-size: 48px;
+      max-width: 600px;
+      margin-top: 0;
+      margin-left: 8rem;
+    }
+  }
+  &__text {
+    font-family: $poppins-regular;
+    font-size: 12px;
+    margin-left: 2rem;
+
+    @include md {
+      font-size: 18px;
+      margin-left: 8rem;
+    }
+
+    &--blue {
+      color: $blue;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    border-radius: 18px;
+  }
+  .article {
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+    @include md {
+      margin-left: 8rem;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+      max-width: 220px;
+      @include md {
+        font-size: 48px;
+        max-width: 350px;
+        line-height: 3rem;
+      }
+    }
+    &__text {
+      font-size: 12px;
+      line-height: 18px;
+      max-width: 275px;
+    }
+  }
+}
+
+.form {
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &::before {
+    content: 'Want us to contact you?';
+    position: absolute;
+    color: #828282;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    top: 0;
+    transform: translateY(-110%);
+  }
+  @include md {
+    margin: 0;
+    margin-left: 8rem;
+    margin-top: 2rem;
+  }
+  &__input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: inherit;
+    background-color: $white;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  &__button {
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 5px;
+    width: 70px;
+    height: 40px;
+    background-color: $blue;
+    border-radius: 12px;
+    color: $white;
+    cursor: pointer;
+  }
+}

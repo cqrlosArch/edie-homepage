@@ -1,0 +1,82 @@
+.services {
+  margin-top: 5rem;
+  @include md {
+    margin-top: 10rem;
+  }
+  &__title {
+    font-size: 24px;
+    line-height: 36px;
+    padding-right: 1rem;
+    margin-left: 2rem;
+    @include md {
+      max-width: 330px;
+      font-size: 36px;
+      margin-left: 4rem;
+    }
+  }
+
+  .cards {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    @include md {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card {
+      margin-bottom: 3rem;
+      padding: 1.5rem;
+      &:hover {
+        box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+        border-radius: 24px;
+      }
+      &:hover .card__button {
+        background-color: $blue;
+        color: $white;
+      }
+      &__icon {
+        height: 67px;
+        width: 67px;
+        display: grid;
+        place-items: center;
+        border-radius: 16px;
+        color: $white;
+
+        &--ui {
+          background-color: $blue;
+        }
+        &--front {
+          background-color: $green;
+          transform: rotate(90deg);
+          font-size: 2rem;
+        }
+        &--back {
+          background-color: $red;
+        }
+      }
+      &__title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+      }
+      &__text {
+        font-family: $poppins-medium;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: $gray;
+      }
+      &__button {
+        border: none;
+        outline: none;
+        width: 116px;
+        height: 42px;
+        border-radius: 12px;
+        background-color: #e0e0e0;
+        color: $bg-button;
+      }
+    }
+  }
+}
